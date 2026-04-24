@@ -3,35 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eoin's Unblocked games</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Phantom Games</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header class="poki-header">
-        <div class="header-content">
-            <div class="logo">🎮 Eoin's Unblocked Games</div>
-            <div class="header-right">
-                <span id="game-count" class="game-count"></span>
-                <div class="search-container">
-                    <input type="text" id="search-bar" placeholder="Search games...">
-                </div>
+    <header class="pg-header">
+        <div class="header-inner">
+            <div class="logo">👻 Phantom Games</div>
+
+            <div class="search-wrap">
+                <input id="search-bar" type="text" placeholder="Search games...">
             </div>
+
+            <span id="game-count" class="game-count"></span>
         </div>
+
+        <nav class="categories">
+            <button data-cat="all" class="active">All</button>
+            <button data-cat="action">Action</button>
+            <button data-cat="sports">Sports</button>
+            <button data-cat="puzzle">Puzzle</button>
+            <button data-cat="classic">Classic</button>
+            <button data-cat="io">.IO</button>
+        </nav>
     </header>
 
     <main class="container">
-        <div id="game-grid" class="poki-grid"></div>
+        <div id="game-grid" class="game-grid"></div>
     </main>
 
-    <div id="game-modal" class="hidden">
+    <div id="game-modal" class="modal hidden">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 id="modal-title">Game Title</h2>
-                <button id="close-btn">✖ Close</button>
+                <h2 id="modal-title"></h2>
+                <button id="close-btn">✖</button>
             </div>
             <div id="iframe-container"></div>
         </div>
@@ -40,3 +49,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
